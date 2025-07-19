@@ -136,6 +136,3 @@ Monitor application health at `/health` endpoint.
 
 Configured with different levels for development and production environments.
 
-## License
-
-MIT License
