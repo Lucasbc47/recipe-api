@@ -113,7 +113,7 @@ Recipe.API/
 
 ```bash
 docker build -t recipe-api .
-docker run -p 7001:80 recipe-api
+docker run -p 5000:80 recipe-api
 ```
 
 ### Testing the API
