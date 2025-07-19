@@ -1,0 +1,45 @@
+## Compiled binaries
+bin/
+obj/
+
+## NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+## Build results
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+
+## Visual Studio Code
+.vscode/
+
+## ASP.NET Core
+appsettings.*.json
+appsettings.Development.json
+secrets.json
+
+## Publish outputs
+wwwroot/
+*.db
+*.log
+
+## Logs
+*.log
+Logs/
+
+## dotenv environment files
+.env
+
+## Others
+*.vs/
