@@ -127,15 +127,12 @@ namespace Recipe.API.Controllers
             try
             {
                 _logger.LogInformation("Updating recipe with ID: {Id}", id);
-                var recipe = MapToModel(updateDto);
-                recipe.Id = id; // Ensure the ID is set for the update
-                var updatedRecipe = await _recipeService.UpdateAsync(id, recipe);
-                
+
+                var updatedRecipe = await _recipeService.UpdateAsync(id, updateDto);
+
                 if (updatedRecipe == null)
-                {
                     return NotFound(ResponseBase<RecipeDto>.CreateError($"Recipe with ID {id} not found"));
-                }
-                
+
                 return Ok(ResponseBase<RecipeDto>.CreateSuccess(MapToDto(updatedRecipe)));
             }
             catch (ArgumentException ex)
@@ -149,6 +146,7 @@ namespace Recipe.API.Controllers
                 return StatusCode(500, ResponseBase<RecipeDto>.CreateError("An error occurred while updating the recipe"));
             }
         }
+
 
         /// <summary>
         /// Delete a recipe

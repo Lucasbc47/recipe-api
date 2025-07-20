@@ -22,7 +22,7 @@
     public class ResponseBase
     {
         public bool Success { get; set; }
-        public string? Message { get; set; } = string.Empty;
+        public string? Message { get; set; } = null;
 
         public static ResponseBase CreateSuccess() => new() { Success = true };
         public static ResponseBase CreateError(string message) => new() { Success = false, Message = message };

@@ -50,23 +50,18 @@ namespace Recipe.API.Models
 
     public class UpdateRecipeDto
     {
-        [Required]
         [StringLength(100, MinimumLength = 1)]
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
 
-        [Required]
-        [MinLength(1)]
-        public List<string> Ingredients { get; set; } = new();
+        public List<string>? Ingredients { get; set; }
 
-        [StringLength(500)]
+        [StringLength(300)]
         public string? Description { get; set; }
 
-        [Required]
-        [MinLength(1)]
-        public List<string> Steps { get; set; } = new();
+        public List<string>? Steps { get; set; }
 
-        public List<string> Images { get; set; } = new();
+        public List<string>? Images { get; set; }
 
-        public List<string> Videos { get; set; } = new();
+        public List<string>? Videos { get; set; }
     }
-} 
+}
